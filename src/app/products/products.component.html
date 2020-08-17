@@ -1,0 +1,25 @@
+<div class="container margin">
+  <div class="row" style="margin-bottom:27px;">
+    
+    <div class="col-md-6">
+      <span class="searchtxt">Search Image</span>
+      <form>
+        <input type="search" (keyup)="search($event.target.value)" class="outline">
+      </form>
+    </div>
+    <div class="col-md-6 text-md-right">
+      <button [routerLink]="['/cart']"  class=" btn-primary ">Go to Favorities</button>
+    </div>
+  </div>
+  
+
+  <div class="row">
+    <div class="col-md-2 mydivouter" *ngFor="let image of response; let i=index;">
+      <img src='{{image.urls.small}}' style="height:200px; width:300px;" />
+      <div class="mybuttonoverlap">
+        <input type="button" class=" btn btn-info" (click)="addSelected(image)" value="Add Favourite" />
+        <input type="button" class=" btn btn-info" (click)="authorPage(image)" value="Author Page" />
+      </div>
+    </div>
+  </div>
+</div>

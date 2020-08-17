@@ -1,0 +1,7 @@
+
+    <div mat-dialog-actions>
+        <input class="search mr-r" mat-input [(ngModel)]="editList.name" value="{{editList.name}}"  placeholder="Enter List Name" required> <br/>
+        <input class="search mr-r" mat-input [(ngModel)]="editList.desc" value="{{editList.desc}}" placeholder="Enter List Desc" required> <br/>
+        <div>
+        <button mat-button (click)="updateList()" class="bg-cg">Update</button></div>
+      </div> 
