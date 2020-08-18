@@ -20,7 +20,7 @@ export class FavComponent implements OnInit {
   cart: Observable<Array<any>>
   lists: any;
   constructor(private store: Store<any>, private dialog: MatDialog) {
-    this.retreiveData();
+    this.fetchData();
   }
   modifyObj(data) {
     var op = {};
@@ -87,11 +87,11 @@ export class FavComponent implements OnInit {
         })
       
         this.store.dispatch(new Cart.Update({ pName: pname, nName: result.name, nDesc: result.desc, arr: arr }))
-        this.retreiveData();
+        this.fetchData();
       }
     });
   }
-  retreiveData() {
+  fetchData() {
     this.store.select('cart').subscribe(data => {
       this.modifyObj(data['cart']);
     })
