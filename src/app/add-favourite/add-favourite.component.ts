@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { SearchServiceService } from '../search.service';
+import { SearchService } from '../search.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material/dialog";
 import { Store } from "@ngrx/store";
@@ -16,7 +16,7 @@ export class AddFavouriteComponent implements OnInit {
   listDesc: any = "";
   showdata: boolean;
   existingList: any;
-  constructor(private service: SearchServiceService, private store: Store<any>, public snackBar: MatSnackBar, private dialogRef: MatDialogRef<AddFavouriteComponent>, @Inject(MAT_DIALOG_DATA) data) {
+  constructor(private service: SearchService, private store: Store<any>, public snackBar: MatSnackBar, private dialogRef: MatDialogRef<AddFavouriteComponent>, @Inject(MAT_DIALOG_DATA) data) {
     this.data = data;
   }
   ngOnInit(): void {

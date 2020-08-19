@@ -3,7 +3,7 @@ import { Actions, Effect, ofType, act } from '@ngrx/effects';
 import { EMPTY } from 'rxjs';
 import { catchError, map, mergeMap } from 'rxjs/operators';
 import { CartActionTypes } from './actions';
-import { SearchServiceService } from '../search.service';
+import { SearchService } from '../search.service';
 
 @Injectable()
 export class storeEffects {
@@ -23,6 +23,6 @@ export class storeEffects {
 
   constructor(
     private actions$: Actions,
-    private serv: SearchServiceService
+    private serv: SearchService
   ) {}
 }

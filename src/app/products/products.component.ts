@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SearchServiceService } from '../search.service';
+import { SearchService } from '../search.service';
 import { AddFavouriteComponent } from '../add-favourite/add-favourite.component';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { Store } from "@ngrx/store";
@@ -16,7 +16,7 @@ export class ProductsComponent implements OnInit {
   lists: any;
   queryString: any;
   searchQuery:any;
-  constructor(private service: SearchServiceService, private store: Store<{ items: any; cart: [] }>, private dialog: MatDialog) { }
+  constructor(private service: SearchService, private store: Store<{ items: any; cart: [] }>, private dialog: MatDialog) { }
 
   ngOnInit() {
     this.retrieveValues();

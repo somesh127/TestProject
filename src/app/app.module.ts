@@ -6,7 +6,7 @@ import {CartListComponent} from'./cart-list/cart-list.component';
 import { ProductsComponent } from './products/products.component';
 import { FavListComponent } from './fav-list/fav-list.component';
 import { Routes, RouterModule } from '@angular/router';
-import { SearchServiceService } from './search.service';
+import { SearchService } from './search.service';
 import { HttpClientModule } from '@angular/common/http'
 import { MaterialModule } from './material/material.module';
 import { storeEffects } from './ngrx-store/effects';
@@ -58,7 +58,7 @@ const routes: Routes = [
     BrowserAnimationsModule
   ],
   entryComponents: [AddFavouriteComponent, EditListComponent],
-  providers: [SearchServiceService],
+  providers: [SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
