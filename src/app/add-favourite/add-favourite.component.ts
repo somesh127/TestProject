@@ -1,13 +1,13 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { SearchServiceService } from '../search-service.service';
+import { SearchServiceService } from '../search.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material/dialog";
 import { Store } from "@ngrx/store";
-import * as Cart from "./../store/actions";
+import * as Cart from "./../ngrx-store/actions";
 
 @Component({
-  selector: 'app-addfavourite',
-  templateUrl: './addfavourite.component.html',
+  selector: 'app-add-favourite',
+  templateUrl: './add-favourite.component.html',
   styles: []
 })
 export class AddFavouriteComponent implements OnInit {

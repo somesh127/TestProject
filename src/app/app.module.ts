@@ -2,18 +2,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {CartComponent} from'./cart/cart.component';
+import {CartListComponent} from'./cart-list/cart-list.component';
 import { ProductsComponent } from './products/products.component';
-import { FavComponent } from './fav/fav.component';
+import { FavListComponent } from './fav-list/fav-list.component';
 import { Routes, RouterModule } from '@angular/router';
-import { SearchServiceService } from './search-service.service';
+import { SearchServiceService } from './search.service';
 import { HttpClientModule } from '@angular/common/http'
 import { MaterialModule } from './material/material.module';
-import { storeEffects } from './store/effects';
+import { storeEffects } from './ngrx-store/effects';
 import { StoreModule } from "@ngrx/store";
-import { reducer } from './store/reducer';
+import { reducer } from './ngrx-store/reducer';
 import { EditListComponent } from './edit-list/edit-list.component';
-import { AddFavouriteComponent } from './addfavourite/addfavourite.component';
+import { AddFavouriteComponent } from './add-favourite/add-favourite.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EffectsModule } from '@ngrx/effects';
@@ -29,7 +29,7 @@ const routes: Routes = [
   },
   {
     path: 'cart',
-    component: FavComponent
+    component: FavListComponent
   },
   {
     path: '**',
@@ -42,10 +42,10 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     ProductsComponent,
-    FavComponent,
+    FavListComponent,
     AddFavouriteComponent,
     EditListComponent,
-    CartComponent
+    CartListComponent
   ],
   imports: [
     BrowserModule,

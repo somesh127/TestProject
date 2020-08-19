@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
+$white: #fff;
+
+$accentPrimary:#4CAF50;
+$accentSecondary: #4CAF50;
 
 img {
     max-width: 100%;
@@ -18,10 +22,10 @@ img {
   margin-left: 5px;;  
 }
 .btn-all,.btn-all:hover {
-background-color: #4CAF50;border: none;color: #fff;
+background-color: $accentPrimary;border: none;color:$white;
 }
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle{
-    background:#4CAF50 !important;border: none;
+    background:$accentPrimary !important;border: none;
 }
 input:focus{
     border:1px solid #ccc;
@@ -74,7 +78,7 @@ input:focus{
     top: -100%;
     left: 0;
     text-align: center;
-    background: #fff;
+    background: $white;
     height: 100%;
     width: 100%;
 }
@@ -85,10 +89,10 @@ input:focus{
     cursor:pointer;color:blue;text-decoration-line: underline;
 }
 .bg-cg {
-    background:#4CAF50 !important;color: #fff;
+    background:$accentPrimary !important;color: $white;
 }
 .bg-cg:hover{
-    color: #fff;
+    color:$white;
 }
 .paddig {
     padding: 10px;

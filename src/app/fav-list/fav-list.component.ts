@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Store, select } from "@ngrx/store";
 import { Observable } from "rxjs/Observable";
-import * as Cart from "../store/actions";
+import * as Cart from "../ngrx-store/actions";
 import { MAT_DIALOG_DATA, MatDialogRef, MatDialog } from "@angular/material/dialog";
 import { EditListComponent } from '../edit-list/edit-list.component';
 
 @Component({
-  selector: 'app-fav',
-  templateUrl: './fav.component.html',
+  selector: 'app-fav-list',
+  templateUrl: './fav-list.component.html',
   styles: [`
 .size{
 width:200px;
@@ -15,7 +15,7 @@ height:200px;
 margin-bottom:10px
   }`]
 })
-export class FavComponent implements OnInit {
+export class FavListComponent implements OnInit {
 
   cart: Observable<Array<any>>
   lists: any;

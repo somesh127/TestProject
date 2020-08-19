@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { SearchServiceService } from '../search-service.service';
-import { AddFavouriteComponent } from '../addfavourite/addfavourite.component';
+import { SearchServiceService } from '../search.service';
+import { AddFavouriteComponent } from '../add-favourite/add-favourite.component';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { Store } from "@ngrx/store";
-import * as Cart from "./../store/actions";
+import * as Cart from "./../ngrx-store/actions";
 
 @Component({
   selector: 'app-products',
