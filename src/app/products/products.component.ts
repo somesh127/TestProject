@@ -8,7 +8,7 @@ import * as Cart from "./../ngrx-store/actions";
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrls: ["./products.component.scss"]
+  styleUrls: []
 })
 export class ProductsComponent implements OnInit {
 
