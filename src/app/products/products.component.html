@@ -4,7 +4,7 @@
     <div class="col-md-6">
       <span class="searchtxt">Search Image</span>
       <form>
-        <input type="search" (keyup)="search($event.target.value)" class="outline">
+        <input type="search" [(ngModel)]="searchQuery" name = "searchQuery" (keyup)="search($event.target.value)" class="outline">
       </form>
     </div>
     <div class="col-md-6 text-md-right">
